@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Spice Haven</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <section class="admin-login" id="loginView">
+      <div class="admin-brand"><span>SPICE HAVEN</span><small>Owner Dashboard</small></div>
+      <form class="admin-login-card" id="loginForm">
+        <h1>Welcome back</h1>
+        <p>Sign in to manage reservations, image galleries, and website settings.</p>
+        <label>Username<input name="username" autocomplete="username" required></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Sign In</button>
+        <div class="login-status" id="loginStatus"></div>
+      </form>
+    </section>
+
+    <section class="admin-dashboard" id="dashboardView" hidden>
+      <aside class="admin-sidebar">
+        <div class="admin-brand"><span>SPICE HAVEN</span><small>Dashboard</small></div>
+        <a href="#bookings">Bookings</a>
+        <a href="#gallery">Menu Images</a>
+        <a href="#settings">Website Settings</a>
+        <a href="#homepage-images">Homepage Images</a>
+        <button id="logoutBtn">Log Out</button>
+      </aside>
+
+      <div class="admin-main">
+        <header class="admin-header">
+          <div><p>Restaurant template control</p><h1>Admin Dashboard</h1></div>
+          <a href="index.html" target="_blank">View Website</a>
+        </header>
+        <div class="admin-status" id="adminStatus"></div>
+
+        <section class="admin-panel" id="bookings">
+          <div class="panel-title"><span>01</span><h2>Bookings</h2></div>
+          <div class="admin-list" id="bookingsList"></div>
+        </section>
+
+        <section class="admin-panel" id="gallery">
+          <div class="panel-title"><span>02</span><h2>Menu & Image Upload</h2></div>
+          <form class="admin-form compact" id="uploadForm">
+            <label>Image Type<select name="type"><option value="menu">Full menu image</option><option value="item">Individual item image</option></select></label>
+            <label>Title<input name="title" placeholder="Lunch menu / Paneer tikka"></label>
+            <label>Cloudinary URL<input name="imageUrl" placeholder="https://res.cloudinary.com/..."></label>
+            <label>Or Upload File<input name="image" type="file" accept="image/*"></label>
+            <button type="submit">Add Image</button>
+          </form>
+          <div class="admin-gallery-list" id="galleryList"></div>
+        </section>
+
+        <section class="admin-panel" id="settings">
+          <div class="panel-title"><span>03</span><h2>Website Settings</h2></div>
+          <form class="admin-form" id="settingsForm">
+            <label>Hotel / Restaurant Name<input name="restaurantName"></label>
+            <label>Facebook Link<input name="facebookUrl"></label>
+            <label>Instagram Link<input name="instagramUrl"></label>
+            <label>Twitter / X Link<input name="twitterUrl"></label>
+            <label>Google Maps iframe code or src<textarea name="googleMapsEmbed" rows="3"></textarea></label>
+            <label>Opening / Closing Time<input name="openingHours"></label>
+            <button type="submit">Save Settings</button>
+          </form>
+        </section>
+
+        <section class="admin-panel" id="homepage-images">
+          <div class="panel-title"><span>04</span><h2>Homepage Image Settings</h2></div>
+          <form class="admin-form" id="imagesForm">
+            <label>Hero image 1<input name="heroImage1"></label>
+            <label>Hero image 1 corner / secondary<input name="heroImage1Secondary"></label>
+            <label>Hero image 2<input name="heroImage2"></label>
+            <label>Hero image 2 corner / secondary<input name="heroImage2Secondary"></label>
+            <label>About image 1<input name="aboutImage1"></label>
+            <label>About image 2<input name="aboutImage2"></label>
+            <label>Booking / reservation side image<input name="reservationImage"></label>
+            <label>Menu page header image<input name="menuHeaderImage"></label>
+            <label>Gallery / images page header image<input name="galleryHeaderImage"></label>
+            <label>Contact page header image<input name="contactHeaderImage"></label>
+            <button type="submit">Save Image URLs</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>

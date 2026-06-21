@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a table at Spice Haven.">
+  <title>Book a Table - Spice Haven</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="topnav" id="myTopnav">
+    <div class="nav-top-row"><div class="logo" data-site-name>SPICE HAVEN</div><button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">&#9776;</button></div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a><a href="menu.html">MENU</a><a href="gallery.html">IMAGES</a><a href="about.html">ABOUT</a><a href="about.html#contact">CONTACT</a><a href="book-a-table.html" class="active">BOOK A TABLE</a>
+    </div>
+  </nav>
+
+  <div class="booking-header" id="heroSection"><h1>BOOK A TABLE</h1></div>
+
+  <section class="booking-layout">
+    <div class="booking-photo"><img data-image="reservationImage" src="images/gallery-16.jpg" alt="Restaurant dining table"></div>
+    <form class="booking-form" id="bookingForm">
+      <div class="booking-controls inline-controls">
+        <div class="booking-field"><label for="party-size">Party Size</label><select id="party-size"><option value="1">1 Guest</option><option value="2" selected>2 Guests</option><option value="3">3 Guests</option><option value="4">4 Guests</option><option value="5">5 Guests</option><option value="6">6 Guests</option><option value="8">8 Guests</option><option value="10">10 Guests</option></select></div>
+        <div class="booking-field"><label for="date">Date</label><input type="date" id="date" name="date" required></div>
+        <div class="booking-field"><label for="time">Time</label><input type="time" id="time" name="time" required></div>
+      </div>
+      <input type="hidden" id="guests" name="guests" value="2">
+      <div class="time-slot-label">Choose a suggested time slot:</div>
+      <div class="time-grid compact-grid"><button type="button" class="time-slot" data-time="12:00">12:00 PM</button><button type="button" class="time-slot" data-time="12:30">12:30 PM</button><button type="button" class="time-slot" data-time="13:00">1:00 PM</button><button type="button" class="time-slot" data-time="18:00">6:00 PM</button><button type="button" class="time-slot" data-time="19:00">7:00 PM</button><button type="button" class="time-slot" data-time="20:30">8:30 PM</button></div>
+      <div class="guest-fields">
+        <label>Name<input name="name" required></label>
+        <label>Phone<input name="phone" required></label>
+        <label>Email optional<input name="email" type="email"></label>
+        <label>Message optional<textarea name="message" rows="4"></textarea></label>
+      </div>
+      <button class="book-btn" type="submit">SEND REQUEST</button>
+      <div class="booking-status" id="bookingStatus"></div>
+    </form>
+  </section>
+
+  <footer class="footer"><div class="footer-logo"><svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 180 97" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#000" d="M92 75c0-12.15 9.85-22 22-22h22v22c0 12.15-9.85 22-22 22H92V75Z"/></svg></div><div class="footer-box"><div class="footer-box1"><p>INDIAN RESTAURANT<br>&amp; CAFFE</p><b data-site-name>SPICE HAVEN</b></div><div class="footer-box2">A: 500 Terry Francine St.<br>San Francisco CA 94158<br>T: 123-456-7890<br>E: hello@spicehaven.com<br><br><span data-opening-hours>Mon-Sun: 12:00 PM - 10:30 PM</span></div><div class="footer-box3"><a href="index.html">HOME</a><a href="menu.html">MENU</a><a href="gallery.html">IMAGES</a><a href="about.html">ABOUT</a><a href="about.html#contact">CONTACT</a><a href="book-a-table.html">BOOK A TABLE</a><a href="#" data-social="instagram" target="_blank">INSTAGRAM</a><a href="#" data-social="facebook" target="_blank">FACEBOOK</a></div></div><p>&copy; 2026 by <span data-site-name>Spice Haven</span>. All rights reserved.</p></footer>
+  <script src="js/main.js"></script><script src="js/bookings.js"></script>
+</body>
+</html>
+

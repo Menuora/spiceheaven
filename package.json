@@ -1,0 +1,20 @@
+﻿{
+  "name": "spiceheaven-sellable-template",
+  "version": "1.0.0",
+  "description": "Sellable hotel and restaurant website template with admin, bookings, Cloudinary uploads, and Vercel-ready API.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check api/index.js && node --check js/main.js && node --check js/bookings.js && node --check js/gallery.js && node --check js/admin.js",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "dependencies": {
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {}
+}
