@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
       <form class="admin-login-card" id="loginForm">
         <h1>Welcome back</h1>
         <p>Sign in to manage reservations, image galleries, and website settings.</p>
-        <label>Username<input name="username" autocomplete="username" required></label>
+        <label>Username or Email<input name="username" autocomplete="username" required></label>
         <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
         <button type="submit">Sign In</button>
         <div class="login-status" id="loginStatus"></div>
@@ -27,6 +27,7 @@
         <a href="#gallery">Menu Images</a>
         <a href="#settings">Website Settings</a>
         <a href="#homepage-images">Homepage Images</a>
+        <a href="#change-password">Change Password</a>
         <button id="logoutBtn">Log Out</button>
       </aside>
 
@@ -83,9 +84,25 @@
             <button type="submit">Save Image URLs</button>
           </form>
         </section>
+        <section class="admin-panel" id="change-password">
+          <div class="panel-title"><span>05</span><h2>Change Password</h2></div>
+          <form class="admin-form" id="passwordForm">
+            <label>Current Password<input name="currentPassword" type="password" required></label>
+            <label>New Password<input name="newPassword" type="password" required></label>
+            <label>Confirm New Password<input name="confirmPassword" type="password" required></label>
+            <button type="submit">Update Password</button>
+          </form>
+        </section>
       </div>
     </section>
   </main>
+  
+  <!-- Firebase Compat SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="js/env.js"></script>
+  <script src="js/firebase-db.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>

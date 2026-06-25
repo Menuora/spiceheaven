@@ -1,0 +1,37 @@
+{
+  "bookings": [
+    {
+      "id": "mqqf3jkl",
+      "name": "Smoke Guest",
+      "phone": "1234567890",
+      "email": "",
+      "date": "2026-06-22",
+      "time": "19:00",
+      "guests": "2",
+      "message": "",
+      "status": "new",
+      "createdAt": "2026-06-23T09:03:50.997Z"
+    }
+  ],
+  "gallery": [],
+  "settings": {
+    "restaurantName": "Spice Haven",
+    "facebookUrl": "#",
+    "instagramUrl": "#",
+    "twitterUrl": "#",
+    "googleMapsEmbed": "",
+    "openingHours": "Mon-Sun: 12:00 PM - 10:30 PM"
+  },
+  "images": {
+    "heroImage1": "images/hero.webp",
+    "heroImage1Secondary": "images/about-1.webp",
+    "heroImage2": "images/gallery-10.webp",
+    "heroImage2Secondary": "images/gallery-13.webp",
+    "aboutImage1": "images/about-1.webp",
+    "aboutImage2": "images/about-2.webp",
+    "reservationImage": "images/gallery-16.jpg",
+    "menuHeaderImage": "images/gallery-13.webp",
+    "galleryHeaderImage": "images/gallery-8.webp",
+    "contactHeaderImage": "images/about-2.webp"
+  }
+}

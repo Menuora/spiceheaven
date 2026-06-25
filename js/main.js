@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   function qs(selector, root) { return (root || document).querySelector(selector); }
   function qsa(selector, root) { return Array.prototype.slice.call((root || document).querySelectorAll(selector)); }
 
@@ -73,6 +73,10 @@
       });
     }
 
-    fetch("/api/settings").then(function (res) { return res.json(); }).then(applySettings).catch(function () {});
+    if (window.dbApi) {
+      window.dbApi.dbGetSettings().then(applySettings).catch(function () {});
+    } else {
+      fetch("/api/settings").then(function (res) { return res.json(); }).then(applySettings).catch(function () {});
+    }
   });
 })();
